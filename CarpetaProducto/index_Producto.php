@@ -1,6 +1,5 @@
 <?php
-include 'ConexionProducto.php';
-
+require_once "../conexion.php";
 $sql = "SELECT * FROM producto";
 $result = $conn->query($sql);
 ?>
@@ -38,7 +37,7 @@ $result = $conn->query($sql);
             <td><?php echo $row['descripcion']; ?></td>
             <td><?php echo $row['stock_actual']; ?></td>
             <td><?php echo $row['precio_unitario']; ?></td>
-            <td><?php echo $row['unidades_medidas']; ?></td>
+            <td><?php echo $row['IDUnidad']; ?></td>
             <td><?php echo $row['costo_adquisicion']; ?></td>
             <td><?php echo $row['IDCategoria']; ?></td>
             <td>

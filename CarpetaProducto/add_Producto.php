@@ -1,6 +1,5 @@
 <?php
-include 'ConexionProducto.php';
-
+require_once "../conexion.php";
 if ($_POST) {
     $codigo_barra = $_POST['codigo_barra'];
     $nombre = $_POST['nombre'];

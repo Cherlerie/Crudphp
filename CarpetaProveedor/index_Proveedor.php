@@ -1,6 +1,5 @@
 <?php
-include 'ConexionProveedor.php';
-
+require_once "../conexion.php";
 $sql = "SELECT * FROM proveedor";
 $result = $conn->query($sql);
 ?>

@@ -1,6 +1,5 @@
 <?php
-include 'ConexionContacto.php';
-
+require_once "../conexion.php";
 if ($_POST) {
     $telefono = $_POST['telefono'];
     $correo = $_POST['correo'];

@@ -1,6 +1,5 @@
 <?php
-include 'ConexionProducto.php';
-
+require_once "../conexion.php";
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
     $sql = "DELETE FROM producto WHERE IDProducto = $id";

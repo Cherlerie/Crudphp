@@ -1,12 +1,12 @@
 <?php
-include 'ConexionArticulo.php';
+require_once "../conexion.php";
 
 if ($_POST) {
     $aprobado = $_POST['aprobado'];
     $precio = $_POST['precio'];
     $idProveedor = $_POST['IDProveedor'];
 
-    $sql = "INSERT INTO articulo (nombre, aprobado, precio, IDProveedor) 
+    $sql = "INSERT INTO articulo (Nombre, aprobado, precio, IDProveedor) 
     VALUES ('$nombre', '$aprobado', $precio, $idProveedor)";
 
     if ($conn->query($sql) === TRUE) {

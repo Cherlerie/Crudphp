@@ -1,6 +1,5 @@
 <?php
-include 'ConexionProducto.php';
-
+require_once "../conexion.php";
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
     $sql = "SELECT * FROM producto WHERE IDProducto = $id";
@@ -25,7 +24,7 @@ if ($_POST) {
     descripcion='$descripcion', 
     stock_actual=$stock_actual, 
     precio_unitario=$precio_unitario, 
-    unidades_medidas='$unidades_medidas', 
+    IDUnidad='$IDUnidad', 
     costo_adquisicion=$costo_adquisicion, 
     IDCategoria=$idCategoria 
     WHERE IDProducto = $id";
@@ -64,7 +63,7 @@ if ($_POST) {
         <label>Precio Unitario:</label><br>
         <input type="number" step="0.01" name="precio_unitario" value="<?php echo $row['precio_unitario']; ?>" required><br>
         <label>Unidad de Medida:</label><br>
-        <input type="text" name="unidades_medidas" value="<?php echo $row['unidades_medidas']; ?>"><br>
+        <input type="number" name="IDUnidad" value="<?php echo $row['IDUnidad']; ?>"><br><br>
         <label>Costo de Adquisición:</label><br>
         <input type="number" step="0.01" name="costo_adquisicion" value="<?php echo $row['costo_adquisicion']; ?>"><br>
         <label>ID Categoría:</label><br>

@@ -1,6 +1,5 @@
 <?php
-include 'ConexionProveedor.php';
-
+require_once "../conexion.php";
 if ($_POST) {
     $nombre = $_POST['nombre'];
     $direccion = $_POST['direccion'];

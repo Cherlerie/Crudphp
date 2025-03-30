@@ -1,6 +1,5 @@
 <?php
-include 'ConexionProveedor.php';
-
+require_once "../conexion.php";
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
     $sql = "DELETE FROM proveedor WHERE IDProveedor = $id";

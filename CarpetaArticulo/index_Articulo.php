@@ -1,5 +1,6 @@
 <?php
-include 'ConexionArticulo.php';
+require_once "../conexion.php";
+
 
 $sql = "SELECT * FROM articulo";
 $result = $conn->query($sql);

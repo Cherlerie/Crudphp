@@ -1,6 +1,5 @@
 <?php
-include 'ConexionCategoria.php';
-
+require_once "../conexion.php";
 if ($_POST) {
     $nombre      = $_POST['nombre'];
     $descripcion = $_POST['descripcion'];

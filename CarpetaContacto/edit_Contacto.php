@@ -1,11 +1,20 @@
 <?php
-include 'ConexionContacto.php';
+require_once "../conexion.php";
 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
     $sql = "SELECT * FROM contacto WHERE IDContacto = $id";
     $result = $conn->query($sql);
-    $row = $result->fetch_assoc();
+
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+    } else {
+        echo "Error: No se encontró el contacto con ID $id.";
+        exit();
+    }
+} else {
+    echo "Error: No se proporcionó un ID válido.";
+    exit();
 }
 
 if ($_POST) {
@@ -30,7 +39,6 @@ if ($_POST) {
     <meta charset="UTF-8">
     <title>Editar Contacto</title>
     <link rel="stylesheet" href="../css/styles.css">
-
 </head>
 <body>
     <h1>Editar Contacto</h1>

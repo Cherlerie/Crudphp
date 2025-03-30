@@ -1,6 +1,5 @@
 <?php
-include 'ConexionContacto.php';
-
+require_once "../conexion.php";
 $sql = "SELECT * FROM contacto";
 $result = $conn->query($sql);
 ?>
